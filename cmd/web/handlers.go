@@ -23,7 +23,7 @@ func home(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 		return
 	}
-	
+
 	err = ts.ExecuteTemplate(w, "base", nil)
 
 	if err != nil {
